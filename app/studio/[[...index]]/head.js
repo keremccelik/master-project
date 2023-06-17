@@ -5,7 +5,7 @@ import { NextStudiHead } from "next-sanity/studio/head";
 export default function CustomStudioHead() {
   return (
     <>
-      <NextStudioHead />
+      <NextStudiHead />
       <link
         rel="icon"
         type="image/png"
