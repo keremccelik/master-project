@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+.select {
+  background-color: #fdfdfd;
+  border: 1px solid #ebebeb;
+  padding: 4px;
+  border-radius: 4px;
+}

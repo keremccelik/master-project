@@ -1,0 +1,22 @@
+/* css properties of  file which stay at bottom with position property of the page */
+.main {
+  position: fixed;
+  height: 60px;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top: 1px solid #ebebeb;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 40px;
+}
