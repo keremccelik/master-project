@@ -10,12 +10,9 @@ export default defineConfig({
   basePath: "/studio",
   name: "default",
   title: "My Sanity Project",
-
   projectId,
   dataset,
-
   plugins: [deskTool(), visionTool()],
-
   schema: {
     types: schemaTypes,
   },
