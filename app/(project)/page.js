@@ -1,10 +1,9 @@
 import styles from "./page.module.css";
 import Link from "next/link";
-import Footer from "@/components/Footer/Footer";
-import useClient from "@/lib/useClient";
+import useClient from "./lib/useClient";
 import Image from "next/image";
-import urlFor from "@/lib/urlFor";
-import Card from "@/components/Card/Card";
+import urlFor from "./lib/urlFor";
+import Card from "./components/Card/Card";
 
 export default async function Home() {
   const client = useClient();
@@ -13,7 +12,7 @@ export default async function Home() {
 
   return (
     <main className={styles.main}>
-      <div>
+      <div className={styles.cardWrapper}>
         {properties.map((property) => (
           <Card
             key={property._id}

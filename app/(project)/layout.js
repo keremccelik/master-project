@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Hind_Siliguri } from "next/font/google";
+import Footer from "@/app/(project)/components/Footer/Footer";
 
 const font = Hind_Siliguri({
   weight: ["400"],
@@ -14,7 +15,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        <main>
+          {children}
+          <Footer />
+        </main>
+      </body>
     </html>
   );
 }

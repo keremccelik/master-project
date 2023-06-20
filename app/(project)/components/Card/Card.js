@@ -17,10 +17,18 @@ export default function Card({ ...props }) {
             fill
           />
         </div>
+        <div className={styles.blockMiddle}>
+          <Image
+            className={styles.image}
+            src="/assets/area.svg"
+            width={24}
+            height={24}
+          />
+          <div className={styles.size}>{props.size} m2</div>
+          <div className={styles.rooms}>{props.rooms}</div>
+        </div>
         <p className={styles.title}>{props.title}</p>
-
         <p className={styles.id}>{props.id}</p>
-
         <p className={styles.adress}>{props.adress}</p>
       </div>
     </main>

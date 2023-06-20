@@ -4,3 +4,9 @@
   align-items: center;
   min-height: 100vh;
 }
+
+.cardWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
