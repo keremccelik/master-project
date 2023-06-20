@@ -1,7 +1,7 @@
 import styles from "./Card.module.css";
 import Image from "next/image";
 
-export default function ({ ...props }) {
+export default function Card({ ...props }) {
   return (
     <main className={styles.main}>
       <div className={styles.wrapper}>

@@ -16,6 +16,7 @@ export default async function Home() {
       <div>
         {properties.map((property) => (
           <Card
+            key={property._id}
             title={property.title}
             type={property.type}
             price={property.basePrice}
