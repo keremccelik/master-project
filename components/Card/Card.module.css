@@ -1,0 +1,45 @@
+.wrapper {
+  width: 280px;
+  padding: 12px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.type {
+  padding: 2px 8px;
+  background-color: #ff395c;
+  color: #fff;
+  border-radius: 100vh;
+  letter-spacing: 0.04em;
+  font-size: 12px;
+}
+
+.blockTop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+.price {
+  font-size: 16px;
+}

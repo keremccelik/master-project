@@ -20,6 +20,63 @@ export default defineType({
       },
     }),
     defineField({
+      name: "rooms",
+      title: "Rooms",
+      type: "string",
+    }),
+    defineField({
+      name: "size",
+      title: "Size",
+      type: "string",
+    }),
+    defineField({
+      name: "garage",
+      title: "Garage",
+      type: "string",
+    }),
+    defineField({
+      name: "adress",
+      title: "Adress",
+      type: "string",
+    }),
+    defineField({
+      name: "furnished",
+      title: "Furnished",
+      type: "boolean",
+    }),
+    defineField({
+      name: "balcony",
+      title: "Balcony",
+      type: "boolean",
+    }),
+    defineField({
+      name: "pool",
+      title: "Pool",
+      type: "boolean",
+    }),
+    defineField({
+      name: "type",
+      title: "Type",
+      type: "string",
+      options: {
+        list: [
+          { title: "Kiralık", value: "Kiralık" },
+          { title: "Satılık", value: "Satılık" },
+        ],
+      },
+    }),
+
+    defineField({
+      name: "yearBuild",
+      title: "Year Build",
+      type: "string",
+    }),
+    defineField({
+      name: "basePrice",
+      title: "Price (TRY)",
+      type: "number",
+    }),
+    defineField({
       name: "mainImage",
       title: "Main image",
       type: "image",
@@ -33,12 +90,12 @@ export default defineType({
       type: "datetime",
     }),
     defineField({
-      name: "body",
-      title: "Body",
-      type: "blockContent",
+      name: "imagesGallery",
+      title: "Images gallery",
+      type: "array",
+      of: [{ type: "image" }],
     }),
   ],
-
   preview: {
     select: {
       title: "title",
