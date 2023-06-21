@@ -12,7 +12,7 @@ export default defineConfig({
   title: "My Sanity Project",
   projectId,
   dataset,
-  useCdn: false,
+
   plugins: [deskTool(), visionTool()],
   schema: {
     types: schemaTypes,
