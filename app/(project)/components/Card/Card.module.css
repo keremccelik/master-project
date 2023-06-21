@@ -51,3 +51,16 @@
 .price {
   font-size: 16px;
 }
+
+.title {
+  font-size: 16px;
+}
+
+.adress {
+  color: #5f5f5f;
+}
+.blockAdress {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}

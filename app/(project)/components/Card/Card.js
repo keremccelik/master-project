@@ -1,5 +1,6 @@
 import styles from "./Card.module.css";
 import Image from "next/image";
+import PriceConverter from "../PriceConverter/PriceConverter";
 
 export default function Card({ ...props }) {
   return (
@@ -7,7 +8,8 @@ export default function Card({ ...props }) {
       <div className={styles.wrapper}>
         <div className={styles.blockTop}>
           <p className={styles.type}>{props.type}</p>
-          <p className={styles.price}>{props.price}</p>
+
+          <PriceConverter priceData={props.price} />
         </div>
         <div className={styles.imageWrapper}>
           <Image
@@ -27,9 +29,13 @@ export default function Card({ ...props }) {
           <div className={styles.size}>{props.size} m2</div>
           <div className={styles.rooms}>{props.rooms}</div>
         </div>
-        <p className={styles.title}>{props.title}</p>
-        <p className={styles.id}>{props.id}</p>
-        <p className={styles.adress}>{props.adress}</p>
+        <div className={styles.blockBottom}>
+          <p className={styles.title}>{props.title}</p>
+          <div className={styles.blockAdress}>
+            <p className={styles.adress}>{props.adress}</p>
+            <p className={styles.adress}>{props.districts}</p>
+          </div>
+        </div>
       </div>
     </main>
   );

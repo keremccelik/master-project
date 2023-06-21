@@ -29,6 +29,7 @@ const CurrencySelect = () => {
 
   return (
     <main className={styles.main}>
+      <p>Select Currency</p>
       <select
         className={styles.select}
         value={selectedCurrency}

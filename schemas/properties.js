@@ -90,6 +90,13 @@ export default defineType({
       type: "datetime",
     }),
     defineField({
+      name: "districts",
+      type: "reference",
+      title: "Districts",
+      to: { type: "districts" },
+    }),
+
+    defineField({
       name: "imagesGallery",
       title: "Images gallery",
       type: "array",

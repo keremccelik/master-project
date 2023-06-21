@@ -1,6 +1,4 @@
-import blockContent from "./blockContent";
-import category from "./category";
 import properties from "./properties";
-import author from "./author";
+import districts from "./districts";
 
-export const schemaTypes = [properties, author, category, blockContent];
+export const schemaTypes = [properties, districts];

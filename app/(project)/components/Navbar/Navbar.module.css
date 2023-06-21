@@ -1,0 +1,98 @@
+.main {
+  border-bottom: 1px solid #eaeaea;
+  padding: 0 24px;
+}
+
+@media screen and (min-width: 992px) {
+  .main {
+    padding: 0 32px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main {
+    padding: 0 40px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+}
+
+.logoWrapper {
+  width: auto;
+  width: 120px;
+  height: 72px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  gap: 8px;
+}
+
+.navlink {
+  display: flex;
+  text-decoration: none;
+  color: #333;
+  font-size: 14.8px;
+  padding: 10px 16px;
+  border-radius: 100vh;
+}
+
+.navlink:hover {
+  background-color: #f7f7f7;
+  transition: background-color 400ms ease;
+}
+
+.navlinkMobile {
+  display: flex;
+  text-decoration: none;
+  color: #333;
+  font-size: 14.8px;
+  padding: 10px 16px;
+  border-radius: 100vh;
+}
+
+.navlinkMobile:hover {
+  background-color: #f7f7f7;
+  transition: background-color 400ms ease;
+}
+
+@media screen and (max-width: 425px) {
+  .navlinkMobile {
+    display: none;
+  }
+
+  .navlink {
+    display: flex;
+    text-decoration: none;
+    color: #333;
+    font-size: 14.8px;
+    padding: 8px 12px;
+    border-radius: 100vh;
+  }
+
+  .nav {
+    gap: 0px;
+    margin-right: -8px;
+  }
+}
