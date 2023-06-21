@@ -18,29 +18,36 @@ export default async function Home() {
 
   return (
     <main className={styles.main}>
-      <div className={styles.districtsWrapper}>
-        {districts.map((district) => (
-          <Districts
-            key={district._id}
-            title={district.title}
-            image={urlFor(district.mainImage).url()}
-          />
-        ))}
-      </div>
-      <div className={styles.cardWrapper}>
-        {properties.map((property) => (
-          <Card
-            key={property._id}
-            title={property.title}
-            type={property.type}
-            price={property.basePrice}
-            image={urlFor(property.mainImage).url()}
-            adress={property.adress}
-            size={property.size}
-            rooms={property.rooms}
-            districts={property.districts.title}
-          />
-        ))}
+      <div className={styles.container}>
+        <div className={styles.heroWrapper}>HERO SECTION</div>
+        <div className={styles.districtsWrapper}>
+          {districts.map((district) => (
+            <div className={styles.districts} key={district._id}>
+              <Districts
+                key={district._id}
+                title={district.title}
+                image={urlFor(district.mainImage).url()}
+              />
+            </div>
+          ))}
+        </div>
+        <div className={styles.cardWrapper}>
+          {properties.map((property) => (
+            <div className={styles.card} key={property._id}>
+              <Card
+                key={property._id}
+                title={property.title}
+                type={property.type}
+                price={property.basePrice}
+                image={urlFor(property.mainImage).url()}
+                adress={property.adress}
+                size={property.size}
+                rooms={property.rooms}
+                districts={property.districts.title}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   );

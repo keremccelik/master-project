@@ -28,12 +28,12 @@ export default function Card({ ...props }) {
           />
           <div className={styles.size}>{props.size} m2</div>
           <div className={styles.rooms}>{props.rooms}</div>
+          <p className={styles.districts}>{props.districts}</p>
         </div>
         <div className={styles.blockBottom}>
           <p className={styles.title}>{props.title}</p>
           <div className={styles.blockAdress}>
             <p className={styles.adress}>{props.adress}</p>
-            <p className={styles.adress}>{props.districts}</p>
           </div>
         </div>
       </div>

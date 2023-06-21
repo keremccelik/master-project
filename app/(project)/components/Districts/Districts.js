@@ -5,6 +5,7 @@ export default async function Districts(props) {
   return (
     <main className={styles.main}>
       <p className={styles.title}>{props.title}</p>
+      <div className={styles.overlay}></div>
       <Image
         className={styles.image}
         src={props.image}
