@@ -6,8 +6,8 @@ import urlFor from "./lib/urlFor";
 import Card from "./components/Card/Card";
 import Districts from "./components/Districts/Districts";
 
-export default async function Home() {
-  const revalidate = 180; //Time interval
+export default async function getServerSideProps() {
+  const revalidate = 40; //Time interval
   const client = useClient();
   const properties = await client.fetch(`*[_type == 'properties']{
     ...,
