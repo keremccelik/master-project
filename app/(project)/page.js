@@ -7,6 +7,7 @@ import Card from "./components/Card/Card";
 import Districts from "./components/Districts/Districts";
 
 export default async function Home() {
+  const revalidate = 180; //Time interval
   const client = useClient();
   const properties = await client.fetch(`*[_type == 'properties']{
     ...,
