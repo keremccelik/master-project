@@ -5,6 +5,7 @@ import Image from "next/image";
 import urlFor from "./lib/urlFor";
 import Card from "./components/Card/Card";
 import Districts from "./components/Districts/Districts";
+import Hero from "./components/Hero/Hero";
 
 export const revalidate = 10;
 
@@ -23,7 +24,8 @@ export default async function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <div className={styles.heroWrapper}>HERO SECTION</div>
+        <Hero />
+
         <div className={styles.districtsWrapper}>
           {districts.map((district) => (
             <div className={styles.districts} key={district._id}>

@@ -1,0 +1,153 @@
+.main {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.heroImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.searchWrapper {
+  min-width: 540px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 32px 32px;
+  border-radius: 12px;
+  color: white;
+  width: auto;
+  margin-bottom: 80px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.searchInputWrapper {
+  width: 100%;
+  margin-top: 18px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: 19.2px;
+}
+
+.description {
+  font-size: 15.2px;
+}
+
+.searchIcon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  z-index: 9;
+  background-color: #ff395c;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100vh;
+  margin-left: 12px;
+}
+
+.searchInput {
+  width: 100%;
+  height: 54px;
+  background-color: white;
+  border: 1px solid #eaeaea;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  color: #333;
+  font-family: inherit;
+  padding-left: 60px;
+}
+
+.searchButton {
+  height: 54px;
+  margin-left: 12px;
+  background-color: #ff395c;
+  border: 1px solid #ff395c;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 14px;
+  outline: none;
+  color: rgb(255, 255, 255);
+  font-family: inherit;
+  align-items: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .searchWrapper {
+    margin: 0 auto 80px;
+  }
+
+  .container {
+    padding: 0 32px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .searchWrapper {
+    margin: 0 auto 80px;
+    min-width: auto;
+  }
+  .container {
+    padding: 0 24px;
+  }
+
+  .title {
+    font-size: 18px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .description {
+    display: none;
+  }
+
+  .searchInputWrapper {
+    flex-direction: column;
+  }
+  .searchIcon {
+    display: none;
+  }
+
+  .searchInput {
+    padding-left: 12px;
+    text-align: center;
+  }
+
+  .searchButton {
+    margin-left: 0;
+    margin-top: 12px;
+    width: 100%;
+  }
+}
+
+.searchInput::placeholder {
+  color: #444;
+}
