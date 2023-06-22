@@ -6,7 +6,7 @@ import urlFor from "./lib/urlFor";
 import Card from "./components/Card/Card";
 import Districts from "./components/Districts/Districts";
 
-export const revalidate = 40;
+export const revalidate = 10;
 
 export default async function Home() {
   const client = useClient();
@@ -17,6 +17,8 @@ export default async function Home() {
   const districts = await client.fetch(
     `*[_type == 'districts' && featured == true]`
   );
+
+  console.log("👉", properties);
 
   return (
     <main className={styles.main}>
@@ -35,19 +37,21 @@ export default async function Home() {
         </div>
         <div className={styles.cardWrapper}>
           {properties.map((property) => (
-            <div className={styles.card} key={property._id}>
-              <Card
-                key={property._id}
-                title={property.title}
-                type={property.type}
-                price={property.basePrice}
-                image={urlFor(property.mainImage).url()}
-                adress={property.adress}
-                size={property.size}
-                rooms={property.rooms}
-                districts={property.districts.title}
-              />
-            </div>
+            <Link href={`/properties/${property.slug.current}`}>
+              <div className={styles.card} key={property._id}>
+                <Card
+                  key={property._id}
+                  title={property.title}
+                  type={property.type}
+                  price={property.basePrice}
+                  image={urlFor(property.mainImage).url()}
+                  adress={property.adress}
+                  size={property.size}
+                  rooms={property.rooms}
+                  districts={property.districts.title}
+                />
+              </div>
+            </Link>
           ))}
         </div>
       </div>

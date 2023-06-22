@@ -1,0 +1,43 @@
+.mapbox {
+  width: 400px;
+  height: 400px;
+}
+
+.mapWrapper {
+  width: 100%;
+  height: 100%;
+  grid-column: span 1;
+}
+
+.map {
+  width: 400px;
+  height: 400px;
+}
+.marker {
+  width: 72px;
+  height: 72px;
+  background-color: #ff395d80;
+  border-radius: 100vh;
+  animation: pulse 2s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.point {
+  width: 24px;
+  height: 24px;
+  background-color: #ff395d;
+  border-radius: 100vh;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

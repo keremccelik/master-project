@@ -97,6 +97,12 @@ export default defineType({
     }),
 
     defineField({
+      name: "position",
+      title: "Position",
+      type: "string",
+    }),
+
+    defineField({
       name: "imagesGallery",
       title: "Images gallery",
       type: "array",
