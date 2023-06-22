@@ -37,7 +37,10 @@ export default async function Home() {
         </div>
         <div className={styles.cardWrapper}>
           {properties.map((property) => (
-            <Link href={`/properties/${property.slug.current}`}>
+            <Link
+              key={property._id}
+              href={`/properties/${property.slug.current}`}
+            >
               <div className={styles.card} key={property._id}>
                 <Card
                   key={property._id}

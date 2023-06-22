@@ -33,7 +33,12 @@ export default async function MyPage({ params }) {
       <p>{data[0].districts.title}</p>
       <Image src={urlFor(data[0].mainImage).url()} width={50} height={50} />
       {data[0].imagesGallery.map((image) => (
-        <Image src={urlFor(image).url()} width={50} height={50} />
+        <Image
+          key={image._key}
+          src={urlFor(image).url()}
+          width={50}
+          height={50}
+        />
       ))}
     </div>
   );
