@@ -9,3 +9,35 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* Hide the default arrow icon */
+select {
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 12px;
+  padding-right: 20px; /* Add space for the arrow icon */
+}
+
+/* Style the select field */
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+  /* Add any other desired styles */
+}
+
+/* Style the dropdown list */
+select option {
+  background-color: #fff;
+  color: #333;
+  /* Add any other desired styles */
+}
+
+/* Style the select field when it's focused */
+select:focus {
+  outline: none;
+  border-color: #00bfff; /* Example color */
+  /* Add any other desired styles */
+}

@@ -27,4 +27,5 @@
   "devDependencies": {
     "@sanity/eslint-config-studio": "^2.0.1"
   }
+  
 }

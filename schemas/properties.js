@@ -60,8 +60,8 @@ export default defineType({
       type: "string",
       options: {
         list: [
-          { title: "Kiralık", value: "Kiralık" },
-          { title: "Satılık", value: "Satılık" },
+          { title: "Kiralık", value: "rent" },
+          { title: "Satılık", value: "sell" },
         ],
       },
     }),

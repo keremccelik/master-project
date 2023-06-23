@@ -6,6 +6,9 @@
   flex-direction: column;
   justify-content: flex-end;
   border-bottom: 1px solid #eaeaea;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 24px;
 }
 
 .heroImage {
@@ -16,17 +19,37 @@
   z-index: -1;
 }
 .container {
-  width: 100%;
+  width: auto;
   max-width: 1280px;
-  padding: 0 40px;
+  padding: 24px 40px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   margin: 0 auto;
   flex-direction: column;
-  justify-content: flex-start;
+  background-color: rgba(255, 255, 255);
+  border-radius: 8px 8px 0 0;
 }
 
+.searchWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.title {
+  font-size: 20px;
+  margin: 0px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+/*
 .searchWrapper {
   min-width: 540px;
   background-color: rgba(0, 0, 0, 0.4);
@@ -151,3 +174,17 @@
 .searchInput::placeholder {
   color: #444;
 }
+.inputField {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.inputField:focus {
+  border-color: #5f9ea0;
+  box-shadow: 0 0 5px rgba(95, 158, 160, 0.5);
+}
+*/

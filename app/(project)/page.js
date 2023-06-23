@@ -19,7 +19,7 @@ export default async function Home() {
     `*[_type == 'districts' && featured == true]`
   );
 
-  console.log("👉", properties);
+  //console.log("👉", properties);
 
   return (
     <main className={styles.main}>
