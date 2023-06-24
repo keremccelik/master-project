@@ -23,6 +23,8 @@ export default function PriceConverter({ priceData }) {
         `https://v6.exchangerate-api.com/v6/64918579a7f587765a8e4347/latest/USD`
       );
 
+      //change api to this one: https://v6.exchangerate-api.com/v6/245e20b631757d69289392b5/latest/USD
+
       if (!res.ok) {
         throw new Error("Failed to fetch data");
       }

@@ -10,7 +10,6 @@ const valZoom = 14;
 export default function Mapbox({ latitude, longitude }) {
   const token =
     "pk.eyJ1Ijoia2VyZW1jZWxpayIsImEiOiJjbDhkMnNvMXIwMGUwM3B0ZnR1cnJ2ZGZ3In0.ZEXmyZhu-aD-jlZqZRRY5A"; // Set your mapbox token here
-  console.log("Mapbox token: ", token);
 
   return (
     <div className={styles.mapWrapper}>

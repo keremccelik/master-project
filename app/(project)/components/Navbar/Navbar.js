@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
+import ButtonPrimary from "../ButtonPrimary/ButtonPrimary";
 
 export default function Header() {
   return (
@@ -9,14 +10,14 @@ export default function Header() {
         <Link href="/" className={styles.logoWrapper}>
           <Image
             className={styles.logo}
-            src="/assets/cadde-logo.png"
+            src="/assets/airbnb-logo.svg"
             alt="logo"
             width={90}
             height={60}
           />
         </Link>
         <div className={styles.nav}>
-          <Link className={styles.navlinkMobile} href="/">
+          <Link className={styles.navlink} href="/">
             Home
           </Link>
           <Link className={styles.navlink} href="/properties">
@@ -25,9 +26,14 @@ export default function Header() {
           <Link className={styles.navlink} href="/about-us">
             About Us
           </Link>
-          <Link className={styles.navlinkMobile} href="/about-us">
+          <Link className={styles.navlink} href="/about-us">
             Contact
           </Link>
+          <ButtonPrimary
+            text={"0242 259 5105"}
+            link={"tel:0242 259 5105"}
+            icon={"assets/phone.svg"}
+          />
         </div>
       </div>
     </main>

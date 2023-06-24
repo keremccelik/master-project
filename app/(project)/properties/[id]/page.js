@@ -6,7 +6,6 @@ import { getPosition } from "../../lib/position";
 import styles from "./page.module.css";
 
 export default async function MyPage({ params }) {
-  console.log("👉", params);
   const client = useClient();
   const slug = params.id;
   const data = await client.fetch(
@@ -17,7 +16,6 @@ export default async function MyPage({ params }) {
     { slug }
   );
 
-  console.log("👉", data);
   const position = data[0].position;
   const { latitude, longitude } = await getPosition(position);
   return (

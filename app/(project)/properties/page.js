@@ -8,13 +8,10 @@ export default async function Property({ searchParams }) {
   const type = searchParams.type;
   const district = searchParams.district;
 
-  console.log("👉👉", type, district);
-
   //const type = searchParams.get("propertyType"); // Assign the type value from the query parameter or use a default value
   //const district = searchParams.get("district"); // Assign the district value from the query parameter or use a default value
 
   const client = useClient();
-  console.log("🔴", type, district);
 
   const query = `*[_type == 'properties' && type == '${type}' && districts->title == '${district}' ]{
     ...,
