@@ -1,0 +1,59 @@
+.main {
+  background-color: #fafafa;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+  width: 100%;
+  display: flex;
+  padding: 24px;
+  width: auto;
+}
+
+.image {
+  border-radius: 100vh;
+  object-fit: cover;
+  width: 52px;
+  height: 52px;
+}
+
+.position {
+  font-size: 18px;
+}
+
+.personDetail {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.button {
+  width: 100%;
+  padding: 12px 24px;
+  background-color: #ff395d;
+  color: white;
+  border-radius: 8px;
+}
+
+.buttonOutline {
+  width: 100%;
+  padding: 12px 24px;
+  color: #ff395d;
+  background-color: white;
+  border: 1px solid #ff395d;
+  border-radius: 8px;
+}
+
+.buttonWrapper {
+  padding-top: 12px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}

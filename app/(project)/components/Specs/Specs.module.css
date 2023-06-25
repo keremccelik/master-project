@@ -1,0 +1,31 @@
+.main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 8px;
+}
+
+.block {
+  padding: 18px 6px;
+  border-radius: 12px;
+  gap: 0px;
+  background-color: #fafafa;
+  border: 1px solid #eaeaea;
+  text-align: center;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13.2px;
+}
+
+.data {
+  font-size: 15.6px;
+  font-weight: 600;
+}

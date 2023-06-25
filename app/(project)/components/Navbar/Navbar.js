@@ -32,7 +32,7 @@ export default function Header() {
           <ButtonPrimary
             text={"0242 259 5105"}
             link={"tel:0242 259 5105"}
-            icon={"assets/phone.svg"}
+            icon={"/assets/phone.svg"}
           />
         </div>
       </div>

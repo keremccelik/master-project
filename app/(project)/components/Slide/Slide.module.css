@@ -1,0 +1,63 @@
+.slideActive {
+  width: 100%;
+  height: 100%;
+}
+
+.Image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main {
+  width: 100%;
+  height: 520px;
+  max-width: 1200px;
+  max-height: 520px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  height: 520px;
+  width: 100%;
+  max-height: 520px;
+}
+
+.Image {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+}
+
+.next {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.previous {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  padding: 6px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

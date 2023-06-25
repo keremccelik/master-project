@@ -77,6 +77,12 @@ export default defineType({
       type: "number",
     }),
     defineField({
+      title: "Content",
+      name: "content",
+      type: "array",
+      of: [{ type: "block" }],
+    }),
+    defineField({
       name: "mainImage",
       title: "Main image",
       type: "image",
@@ -94,6 +100,12 @@ export default defineType({
       type: "reference",
       title: "Districts",
       to: { type: "districts" },
+    }),
+    defineField({
+      name: "agents",
+      type: "reference",
+      title: "Agent",
+      to: { type: "agents" },
     }),
 
     defineField({
