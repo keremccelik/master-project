@@ -10,24 +10,16 @@
 }
 .main {
   width: 100%;
-  height: 520px;
+  height: 100%;
   max-width: 1200px;
-  max-height: 520px;
   border-radius: 12px;
   overflow: hidden;
 }
 
 .container {
   position: relative;
-  height: 520px;
+  height: 100%;
   width: 100%;
-  max-height: 520px;
-}
-
-.Image {
-  width: 100%;
-  max-height: 520px;
-  object-fit: cover;
 }
 
 .next {

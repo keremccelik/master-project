@@ -1,20 +1,66 @@
 .main {
-  background-color: #fafafa;
-  height: auto;
-  border-radius: 12px;
-  border: 1px solid #eaeaea;
-  width: 100%;
   display: flex;
+  width: 100%;
+  height: auto;
   padding: 24px;
-  width: auto;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  height: auto;
+  align-items: center;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.agentInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.agentImage {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 100vh;
+  overflow: hidden;
+  position: relative;
+}
 .image {
+  object-fit: cover;
+}
+
+.agentName {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/*
+
+.agentImage {
   border-radius: 100vh;
   object-fit: cover;
   width: 52px;
   height: 52px;
+  overflow: hidden;
+  position: relative;
 }
+
 
 .position {
   font-size: 18px;
@@ -57,3 +103,5 @@
   gap: 12px;
   justify-content: center;
 }
+
+*/

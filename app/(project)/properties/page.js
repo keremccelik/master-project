@@ -1,19 +1,17 @@
 import useClient from "../lib/useClient";
 import styles from "./page.module.css";
-import { useParams } from "next/navigation";
 
 export const revalidate = 10;
 
 export default async function Property({ searchParams }) {
-  const type = searchParams.type;
-  const district = searchParams.district;
-
-  //const type = searchParams.get("propertyType"); // Assign the type value from the query parameter or use a default value
-  //const district = searchParams.get("district"); // Assign the district value from the query parameter or use a default value
-
   const client = useClient();
+  let query = `*[_type == 'properties'`;
 
-  const query = `*[_type == 'properties' && type == '${type}' && districts->title == '${district}' ]{
+  if (searchParams.type) {
+    query += ` && type == '${searchParams.type}'`;
+  }
+
+  query += ` && districts->title == '${searchParams.district}' ]{
     ...,
     districts->{title}
   }`;

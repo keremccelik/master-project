@@ -25,11 +25,17 @@
   .container {
     padding: 0 24px;
   }
+  .navlinkMobile {
+    display: none !important;
+  }
 }
 
 @media screen and (max-width: 425px) {
   .container {
     padding: 0 16px;
+  }
+  .navlinkMobile {
+    display: none !important;
   }
 }
 
@@ -70,32 +76,12 @@
   display: flex;
   text-decoration: none;
   color: #333;
-
-  padding: 10px 16px;
-  border-radius: 100vh;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 8px;
 }
 
 .navlinkMobile:hover {
   background-color: #f7f7f7;
   transition: background-color 400ms ease;
-}
-
-@media screen and (max-width: 425px) {
-  .navlinkMobile {
-    display: none;
-  }
-
-  .navlink {
-    display: flex;
-    text-decoration: none;
-    color: #333;
-    font-size: 14.8px;
-    padding: 8px 12px;
-    border-radius: 100vh;
-  }
-
-  .nav {
-    gap: 0px;
-    margin-right: -8px;
-  }
 }

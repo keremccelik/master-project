@@ -11,6 +11,7 @@ import Slide from "../../components/Slide/Slide";
 export default async function MyPage({ params }) {
   const client = useClient();
   const slug = params.id;
+
   const data = await client.fetch(
     `*[_type == 'properties' && slug.current == $slug]{
         ...,
@@ -22,11 +23,13 @@ export default async function MyPage({ params }) {
         }`,
     { slug }
   );
+
   const agent = data[0].agents.name;
   const mainImage = data[0].mainImage;
   const SliderData = data[0].imagesGallery.map((image) => urlFor(image).url());
 
   const position = data[0].position;
+
   const { latitude, longitude } = await getPosition(position);
   return (
     <main className={styles.main}>

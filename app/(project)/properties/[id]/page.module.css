@@ -8,10 +8,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   max-width: 1200px;
   width: 100%;
   margin: auto;
+  height: auto;
 }
 
 /* 5 col and 2 row grid wrapper */
@@ -34,8 +34,11 @@
 
 .block {
   grid-column: 4/6;
-
-  height: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .titleWrapper {

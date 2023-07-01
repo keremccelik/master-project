@@ -17,16 +17,16 @@ export default function Header() {
           />
         </Link>
         <div className={styles.nav}>
-          <Link className={styles.navlink} href="/">
+          <Link className={styles.navlinkMobile} href="/">
             Home
           </Link>
           <Link className={styles.navlink} href="/properties">
             Properties
           </Link>
-          <Link className={styles.navlink} href="/about-us">
+          <Link className={styles.navlinkMobile} href="/about-us">
             About Us
           </Link>
-          <Link className={styles.navlink} href="/about-us">
+          <Link className={styles.navlinkMobile} href="/about-us">
             Contact
           </Link>
           <ButtonPrimary
