@@ -16,6 +16,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .cardImage {
@@ -50,4 +51,20 @@
 
 .link {
   width: 100%;
+}
+
+/* Mobile Optimization */
+@media (max-width: 767px) {
+  .card {
+    flex-direction: column; /* Change layout to vertical */
+    height: auto;
+    padding: 16px 16px 16px 0; /* Adjust padding for mobile layout */
+  }
+
+  .cardImage {
+    min-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
 }

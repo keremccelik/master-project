@@ -73,7 +73,7 @@ export default defineType({
     }),
     defineField({
       name: "basePrice",
-      title: "Price (TRY)",
+      title: "Price (USD)",
       type: "number",
     }),
     defineField({

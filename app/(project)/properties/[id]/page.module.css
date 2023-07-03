@@ -21,7 +21,7 @@
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 10px;
   width: 100%;
-  height: 540px;
+  height: auto; /* Adjusted to accommodate the total height of the grid items */
   max-width: 1200px;
   margin: auto;
 }
@@ -30,6 +30,7 @@
 .slideWrapper {
   grid-column: 1 / 4;
   grid-row: 1 / 3;
+  height: 100%;
 }
 
 .block {
@@ -54,4 +55,63 @@
   width: 100%;
   grid-column: 4/6;
   grid-row: 2/3;
+  height: 100%;
+}
+
+/* Mobile Optimization */
+@media (max-width: 767px) {
+  .mapWrapper {
+    height: 200px;
+    width: 100%;
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 5px;
+    height: auto;
+  }
+
+  .slideWrapper {
+    grid-column: 1 / 3;
+    grid-row: 1 / 4;
+  }
+
+  .block {
+    grid-column: 1/3;
+  }
+
+  .specsWrapper {
+    grid-column: 1/3;
+    grid-row: 4/6;
+  }
+}
+
+/* Tablet Optimization */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mapWrapper {
+    height: 250px;
+    width: 100%;
+  }
+
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 8px;
+    height: auto;
+  }
+
+  .slideWrapper {
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+  }
+
+  .block {
+    grid-column: 1/4;
+  }
+
+  .specsWrapper {
+    grid-column: 1/4;
+    grid-row: 3/4;
+  }
 }
