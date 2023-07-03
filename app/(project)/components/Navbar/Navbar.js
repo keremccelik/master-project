@@ -10,7 +10,7 @@ export default function Header() {
         <Link href="/" className={styles.logoWrapper}>
           <Image
             className={styles.logo}
-            src="/assets/airbnb-logo.svg"
+            src="/assets/cadde-logo.png"
             alt="logo"
             width={90}
             height={60}

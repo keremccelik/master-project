@@ -10,10 +10,14 @@
 
 .container {
   width: 100%;
+  max-width: 1200px;
+  margin: auto;
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .searchWrapper {
@@ -94,4 +98,28 @@
 }
 .submit {
   white-space: nowrap;
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .searchWrapper {
+    padding: 24px;
+    width: auto;
+    height: auto;
+  }
+  .assetWrapper {
+    display: none;
+  }
+  .main {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 425px) {
 }

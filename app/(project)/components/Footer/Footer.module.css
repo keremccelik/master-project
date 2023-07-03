@@ -21,3 +21,9 @@
   max-width: 1200px;
   padding: 40px;
 }
+
+@media screen and (max-width: 768px) {
+  .copyright {
+    display: none !important;
+  }
+}
