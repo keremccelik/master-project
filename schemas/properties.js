@@ -25,6 +25,11 @@ export default defineType({
       type: "string",
     }),
     defineField({
+      name: "contents",
+      title: "Contents",
+      type: "string",
+    }),
+    defineField({
       name: "size",
       title: "Size",
       type: "string",
@@ -76,12 +81,7 @@ export default defineType({
       title: "Price (USD)",
       type: "number",
     }),
-    defineField({
-      title: "Content",
-      name: "content",
-      type: "array",
-      of: [{ type: "block" }],
-    }),
+
     defineField({
       name: "mainImage",
       title: "Main image",

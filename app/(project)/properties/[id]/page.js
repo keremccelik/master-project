@@ -7,6 +7,9 @@ import styles from "./page.module.css";
 import Agent from "../../components/Agent/Agent";
 import Specs from "../../components/Specs/Specs";
 import Slide from "../../components/Slide/Slide";
+import Container from "../../components/Commons/Container/Container";
+import Grid from "../../components/Commons/Grid/Grid";
+import PriceConverter from "../../components/PriceConverter/PriceConverter";
 
 export default async function MyPage({ params }) {
   const client = useClient();
@@ -18,8 +21,7 @@ export default async function MyPage({ params }) {
         districts->{title},
         agents->{name},
         mainImage,
-        imagesGallery
-
+        imagesGallery,
         }`,
     { slug }
   );
@@ -29,18 +31,27 @@ export default async function MyPage({ params }) {
   const SliderData = data[0].imagesGallery.map((image) => urlFor(image).url());
 
   const position = data[0].position;
+  const price = data[0].price;
 
   const { latitude, longitude } = await getPosition(position);
   return (
-    <main className={styles.main}>
-      <div className={styles.titleWrapper}>
-        <h1 className={styles.title}>{data[0].title}</h1>
-      </div>
-      <div className={styles.container}>
-        <div className={styles.slideWrapper}>
+    <Container>
+      <Grid>
+        <div className={styles.module1}>
           <Slide sliderData={SliderData} />
         </div>
-        <div className={styles.specsWrapper}>
+        <div className={styles.module2}>
+          <div className={styles.priceBlcok}>
+            <h1 className={styles.price}> </h1>
+            <h4 className={styles.type}>{data[0].type}</h4>
+            <p className={styles.title}>{data[0].title}</p>
+            <PriceConverter priceData={data[0].basePrice} />
+          </div>
+        </div>
+        <div className={styles.module3}>
+          <Agent agent={agent} />
+        </div>
+        <div className={styles.module4}>
           <Specs
             specs={{
               size: data[0].size,
@@ -53,21 +64,13 @@ export default async function MyPage({ params }) {
             }}
           />
         </div>
-
-        <div className={styles.block}>
-          <Agent agent={agent} />
+        <div className={styles.module5}>
+          <Mapbox latitude={latitude} longitude={longitude} />
         </div>
-      </div>
-
-      <div className={styles.mapWrapper}>
-        {<Mapbox latitude={latitude} longitude={longitude} />}
-      </div>
-      <h1>{data[0].title}</h1>
-      <p>{data[0].description}</p>
-      <p>{data[0].adress}</p>
-      <p>{data[0].size}</p>
-      <p>{data[0].rooms}</p>
-      <p>{data[0].districts.title}</p>
-    </main>
+        <div className={styles.module6}>
+          <p className={styles.contents}>{data[0].contents}</p>
+        </div>
+      </Grid>
+    </Container>
   );
 }

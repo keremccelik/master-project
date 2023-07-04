@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   height: auto;
-  padding: 24px;
+  padding: 12px;
   background-color: #fafafa;
   border-radius: 8px;
   border: 1px solid #eaeaea;
@@ -18,8 +18,8 @@
 }
 
 .title {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 14.4px;
+  font-weight: 400;
 }
 
 .agentInfo {
@@ -34,8 +34,8 @@
 }
 
 .agentImage {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   object-fit: cover;
   border-radius: 100vh;
   overflow: hidden;
@@ -48,6 +48,15 @@
 .agentName {
   font-size: 16px;
   font-weight: 500;
+}
+
+.imageNameWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 /*

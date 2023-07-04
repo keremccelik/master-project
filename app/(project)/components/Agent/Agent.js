@@ -15,19 +15,20 @@ export default async function Agent(params) {
       <div className={styles.container}>
         <h4 className={styles.title}>Real Estate Consultant</h4>
 
-        <div className={styles.agentImage}>
-          <Image
-            className={styles.image}
-            src={urlFor(agent[0].image).url()}
-            fill
-          />
-        </div>
-        <div className={styles.agentInfo}>
-          <p className={styles.agentName}>{agent[0].name}</p>
-          <div className={styles.buttonWrapper}>
-            <Button text="Call" href={`tel:${agent[0].phone}`} />
-            <Button text="Email" href={`mailto:${agent[0].email}`} />
+        <div className={styles.imageNameWrapper}>
+          <div className={styles.agentImage}>
+            <Image
+              className={styles.image}
+              src={urlFor(agent[0].image).url()}
+              fill
+            />
           </div>
+          <p className={styles.agentName}>{agent[0].name}</p>
+        </div>
+
+        <div className={styles.buttonWrapper}>
+          <Button text="Call" href={`tel:${agent[0].phone}`} />
+          <Button text="Email" href={`mailto:${agent[0].email}`} />
         </div>
       </div>
     </main>
