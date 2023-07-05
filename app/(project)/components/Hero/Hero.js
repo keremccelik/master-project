@@ -29,11 +29,12 @@ export default function Hero() {
           <div className={styles.searchBar}>
             <form onSubmit={handleSearch} className={styles.form}>
               <select name="type" className={styles.select}>
-                <option value="rent">Kiralık</option>
                 <option value="sell">Satılık</option>
+                <option value="rent">Kiralık</option>
               </select>
 
               <select name="district" className={styles.select}>
+                <option value="Konyaaltı">Konyaalti</option>
                 <option value="Akseki">Akseki</option>
                 <option value="Aksu">Aksu</option>
                 <option value="Alanya">Alanya</option>
@@ -47,7 +48,6 @@ export default function Hero() {
                 <option value="Kaş">Kaş</option>
                 <option value="Kemer">Kemer</option>
                 <option value="Kepez">Kepez</option>
-                <option value="Konyaalti">Konyaalti</option>
                 <option value="Korkuteli">Korkuteli</option>
                 <option value="Kumluca">Kumluca</option>
                 <option value="Manavgat">Manavgat</option>

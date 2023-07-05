@@ -2,6 +2,7 @@ import "./globals.css";
 import { Hind_Siliguri } from "next/font/google";
 import Footer from "@/app/(project)/components/Footer/Footer";
 import Navbar from "@/app/(project)/components/Navbar/Navbar";
+import Whatsapp from "./components/Whatsapp/Whatsapp";
 
 const font = Hind_Siliguri({
   weight: ["400"],
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
         <main>
           <Navbar />
           {children}
+          <Whatsapp />
           <Footer />
         </main>
       </body>
