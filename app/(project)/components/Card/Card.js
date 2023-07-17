@@ -7,7 +7,9 @@ export default function Card({ ...props }) {
     <main className={styles.main}>
       <div className={styles.wrapper}>
         <div className={styles.blockTop}>
-          <p className={styles.type}>{props.type}</p>
+          <p className={styles.type}>
+            {props.type === "sell" ? "SATILIK" : "KİRALIK"}
+          </p>
 
           <PriceConverter priceData={props.price} />
         </div>

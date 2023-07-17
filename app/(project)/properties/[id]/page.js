@@ -43,7 +43,9 @@ export default async function MyPage({ params }) {
         <div className={styles.module2}>
           <div className={styles.priceBlcok}>
             <h1 className={styles.price}> </h1>
-            <h4 className={styles.type}>{data[0].type}</h4>
+            <h4 className={styles.type}>
+              {data[0].type === "sell" ? "SATILIK" : "KİRALIK"}
+            </h4>
             <p className={styles.title}>{data[0].title}</p>
             <PriceConverter priceData={data[0].basePrice} />
           </div>

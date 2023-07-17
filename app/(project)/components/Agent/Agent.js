@@ -3,12 +3,15 @@ import Image from "next/image";
 import useClient from "../../lib/useClient";
 import urlFor from "../../lib/urlFor";
 import Button from "../Button/Button";
+import Link from "next/link";
 
 export default async function Agent(params) {
   const client = useClient();
   const agent = await client.fetch(
     `*[_type == 'agents' && name== '${params.agent}']{...}`
   );
+
+  console.log(agent);
 
   return (
     <main className={styles.main}>
@@ -27,8 +30,15 @@ export default async function Agent(params) {
         </div>
 
         <div className={styles.buttonWrapper}>
-          <Button text="Call" href={`tel:${agent[0].phone}`} />
-          <Button text="Email" href={`mailto:${agent[0].email}`} />
+          <Link className={styles.contactButton} href={`tel:${agent[0].phone}`}>
+            Call
+          </Link>
+          <Link
+            className={styles.contactButton}
+            href={`mailto:${agent[0].email}`}
+          >
+            Email
+          </Link>
         </div>
       </div>
     </main>
