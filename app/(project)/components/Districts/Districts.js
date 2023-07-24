@@ -1,5 +1,4 @@
 import styles from "./Districts.module.css";
-import Image from "next/image";
 import Link from "next/link";
 
 export default async function Districts(props) {
@@ -8,7 +7,7 @@ export default async function Districts(props) {
       <main className={styles.main}>
         <p className={styles.title}>{props.title}</p>
         <div className={styles.overlay}></div>
-        <Image
+        <img
           className={styles.image}
           src={props.image}
           width={300}
