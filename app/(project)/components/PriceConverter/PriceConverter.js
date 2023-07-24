@@ -20,11 +20,8 @@ export default function PriceConverter({ priceData }) {
 
     async function getRates() {
       const res = await fetch(
-        `https://v6.exchangerate-api.com/v6/245e20b631757d69289392b5/latest/USD`
+        `https://v6.exchangerate-api.com/v6/4040518054e766b99ad581ee/latest/USD`
       );
-
-      //original: https://v6.exchangerate-api.com/v6/245e20b631757d69289392b5/latest/USD
-      //test: https://v6.exchangerate-api.com/v6/64918579a7f587765a8e4347/latest/USD
 
       if (!res.ok) {
         throw new Error("Failed to fetch data");
